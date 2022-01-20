@@ -1,0 +1,356 @@
+/* 页面布局 */
+.code_preview_multiple_wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 600px;
+  /* margin: 0 auto; */
+  margin-bottom: 30px;
+  background: #fff;
+  border: 1px solid #e9eef3;
+  border-radius: 4px;
+}
+.cp_mt_content {
+  display: flex;
+  align-items: stretch;
+}
+
+
+.cp_mt_content .left-nav {
+  width: 280px;
+  display: flex;
+}
+.cp_mt_content .right-content{
+  width: 500px;
+  flex: 1;
+}
+
+/* 左侧 树/工具栏 start*/
+.left-nav .l-n-tree {
+  flex: 1;
+  overflow: auto;
+  border-right: 1px solid #ddd;
+}
+.left-nav .l-n-tool {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 32px;
+  border-right: 1px solid #e9eef3;
+}
+.left-nav .l-n-tool span {
+  display: inline-block;
+  width: 100%;
+  height: 20px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+.left-nav .l-n-tool span svg{
+  width: 18px;
+  height: 18px;
+}
+.left-nav .l-n-tree .ant-tree-treenode .ant-tree-switcher_open {
+ transform: rotate(90deg);
+}
+/* 左侧 树/工具栏 end*/
+
+
+/* 复制、全屏工具 start*/
+.r-c-tools,
+.r-c-tools2{
+  position: absolute;
+  right: 30px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px 0 rgb(137 145 157 / 15%);
+  z-index:  9999;
+  cursor: pointer;
+}
+.r-c-tools {
+  bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40px;
+}
+.code_preview_multiple_wrap:hover .r-c-tools2,
+.code_preview_sigle_wrap:hover .r-c-tools2{
+  opacity: 1;
+}
+.r-c-tools .floatIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8px 0;
+  color: #89919d;
+  cursor: pointer;
+}
+.r-c-tools .floatIcon:hover {
+  color: #2b66ff;
+}
+.r-c-tools .floatIcon .icon-fullscreen{
+  font-size: 18px;
+}
+.r-c-tools2{
+  top: 10px;
+  height: 20px;
+  padding: 0 4px;
+  color: #717a88!important;
+  font-size: 12px;
+  line-height: 18px;
+  border-radius: 4px;
+  border: 1px solid #c9d1dc;
+  opacity: 0;
+}
+/* 复制、全屏工具 end*/
+
+
+
+.code_preview_sigle_wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 544px;
+  /* margin: 0 auto; */
+  background: #fff;
+  border: 1px solid #e9eef3;
+  border-radius: 4px;
+  overflow: auto;
+  margin-bottom: 30px;
+}
+.cp_sg_content .code {
+  position: relative;
+  flex: 1;
+  height: 100%;
+  line-height: 1.15;
+  overflow: auto;
+  outline: none;
+}
+
+
+
+/* 多文件代码与单文件代码共享样式 */
+/* 头部区域 */
+.cp_sg_top,
+.cp_mt_top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+  padding: 4px;
+  border-bottom: 1px solid #e9eef3;
+}
+.cp_sg_top h1,
+.cp_mt_top h1{
+  line-height: 1;
+  font-size: 1.2em;
+  font-weight: 500;
+  margin: 5px 14px;
+}
+.cp_sg_top a,
+.cp_mt_top a {
+  margin: 0px 10px;
+}
+
+/* 代码内容区 */
+.cp_sg_content,
+.cp_mt_content {
+  display: flex;
+  justify-content: space-between;
+  height: calc(100% - 48px);
+}
+.cp_sg_content_notitle,
+.cp_mt_content_notitle {
+  height: 100% !important;
+}
+
+
+/* 预览区域 */
+.cp_mt_content .preview,
+.cp_sg_content .preview {
+  position: relative;
+  width: 285px;
+  max-width: 50%;
+  overflow: hidden auto;
+  border-left: 1px solid #e9eef3;
+}
+.cp_mt_content .preview .tip,
+.cp_sg_content .preview .tip {
+  margin: 30px 0;
+  font-size: 16px;
+  text-align: center;
+}
+.cp_mt_content .preview .tip{
+  text-align: center;
+}
+.preview canvas {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+/* 页面布局 */
+
+
+/* 重置ant样式 */
+.l-n-tree .ant-tree-switcher {
+  width: 20px;
+}
+.l-n-tree .ant-tree-list .ant-tree-node-content-wrapper {
+  display: flex;
+  align-items: center;
+  padding-left: 0;
+  padding-right: 20px;
+  white-space: nowrap;
+}
+.l-n-tree .ant-tree-list .ant-tree-node-content-wrapper .ant-tree-iconEle {
+  width: 16px !important;
+  margin-right: 6px;
+}
+.l-n-tree .ant-tree-list .ant-tree-node-content-wrapper .ant-tree-title {
+  color: #273140;
+}
+.l-n-tree .ant-tree-switcher-noop{
+  width: 18px !important;
+}
+.l-n-tree .ant-tree-list .ant-tree-treenode-selected:before{
+   background-color: transparent !important;
+}
+.l-n-tree .ant-tree-list .ant-tree-treenode-selected .ant-tree-node-selected .ant-tree-title{
+   color: #2b66ff!important
+}
+.l-n-tree .ant-tree-iconEle .icon-folder-fill {
+  color: #6bcaf4;
+}
+.l-n-tree .ant-tree-iconEle .icon-folder-fill,
+.l-n-tree .ant-tree-iconEle .icon-file-text {
+  font-size: 12px;;
+}
+.l-n-tree .ant-tree-node-selected .ant-tree-iconEle .iconfont {
+  color: #2b66ff;
+}
+.l-n-tree .ant-tree-treenode-selected .ant-tree-switcher {
+  color: rgba(0,0,0,.85) !important;
+}
+
+.right-content .ant-tabs{
+  height: 100%;
+  line-height: 1.15;
+  overflow: auto;
+}
+.right-content .ant-tabs-content .image-wrapper {
+  text-align: center;
+    margin-top: 30px;
+}
+.right-content .ant-tabs-content .image-wrapper img{
+  max-width: 80%;
+  vertical-align: middle;
+  border-style: none;
+}
+.right-content .ant-tabs-content-holder {
+  max-height: calc(100% - 30px);
+  overflow: auto;
+}
+.right-content .ant-tabs-card>.ant-tabs-nav .ant-tabs-tab {
+  padding: 6px 16px;
+  line-height: 1.15;
+}
+.right-content .ant-tabs-top>.ant-tabs-nav {
+  margin: 0;
+}
+.right-content .ant-tabs-card.ant-tabs-top>.ant-tabs-nav .ant-tabs-tab {
+  border-radius: 0;
+  border-left: none;
+  border-top: none;
+}
+.right-content .ant-tabs-card.ant-tabs-top>.ant-tabs-nav .ant-tabs-tab+.ant-tabs-tab{
+  margin-left: 0;
+}
+.right-content .ant-tabs-card.ant-tabs-top>.ant-tabs-nav .ant-tabs-tab-active{
+  border-bottom-color: #f0f0f0;
+}
+/* 重置ant样式 */
+
+
+/* 重置编辑器样式 start*/
+.code_preview_multiple_wrap .CodeMirror,
+.code_preview_sigle_wrap .CodeMirror {
+  height: 100%;
+  font-size: 13px;
+  line-height: 20px;
+  /* font-family: Menlo, Monaco, "Courier New", monospace; */
+  font-family: monospace;
+  font-weight: normal;
+  letter-spacing: 0px;
+  color: rgb(56, 58, 66);
+}
+/* .CodeMirror-linenumbers{
+  width: 0 !important;
+}
+.CodeMirror-sizer{
+  margin-left: 0 !important;
+} */
+.CodeMirror-gutters {
+  border-right: none !important;
+  background-color: #fff !important;
+}
+/* 重置编辑器样式 end*/
+
+
+::selection {
+  color: #fff;
+  background: #1890ff
+}
+
+
+@font-face {
+  font-family: "iconfont"; /* Project id 2982379 */
+  src: url('//at.alicdn.com/t/font_2982379_6ntiyswiw8u.woff2?t=1638431564041') format('woff2'),
+       url('//at.alicdn.com/t/font_2982379_6ntiyswiw8u.woff?t=1638431564041') format('woff'),
+       url('//at.alicdn.com/t/font_2982379_6ntiyswiw8u.ttf?t=1638431564041') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-right-bold:before {
+  content: "\e687";
+}
+
+.icon-folder-fill:before {
+  content: "\e85e";
+}
+
+.icon-home:before {
+  content: "\e7c6";
+}
+
+.icon-fullscreen:before {
+  content: "\e794";
+}
+
+.icon-search:before {
+  content: "\e7b3";
+}
+
+.icon-book:before {
+  content: "\e632";
+}
+
+.icon-copy:before {
+  content: "\e720";
+}
+
+.icon-file-text:before {
+  content: "\e7b9";
+}
+
+
+

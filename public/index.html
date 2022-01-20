@@ -1,43 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="https://at.alicdn.com/t/font_2982379_6ntiyswiw8u.css">
+  <title>React Code Preview</title>
+</head>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+<body>
+  <div class="git_repo_container" data-repo-id="477707" data-try-title="canvas"
+    data-qr-code-url="http://ajxtool.amap.test/ajxQrCode/download.ajx?id=268&library=0&page=path%3A%2F%2Fajx-bestPractices%2FbestPractices%2Fcanvas%2Famap_bundle_foxdemo%2Fpages%2Findex.page.js&server=http%3A%2F%2Fajxtool.amap.test%2FajxQrCode%2FgetAjxDetail%3Fid%3D268%26library%3D0&bundle=ajx-bestPractices"
+    data-repo-target="/bestPractices/canvas" data-repo-open="readme.md"
+    data-repo-src="git@gitlab.alibaba-inc.com:ajx-demo/ajx-bestPractices.git">
+  </div>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+
+  <!-- <div
+      class="git_repo_container"
+      data-code-type="javascript"
+      data-repo-id="2259303"
+      data-repo-src="git@gitlab.alibaba-inc.com:ajx-demo/ajx-try-demo.git"
+      data-repo-open="src/pages/index.page">
+      <xmp>
+        ajx.addEventListener('ready',function(){
+          //xml 结构
+          var xml = '<div id="box">';
+          xml += '<label text="hello world" id="test" style="height:200px;border-width:1px;"></label>';
+          xml += '<label text="hello world 2" id="test2"></label>';
+          xml += '</div>';
+          //样式内容
+          var css = '#box{background-color:#0000ff}';
+          css += '#test{color:#ffffff}';
+          css += '#test2{color:#ff0000}';
+          //应用样式
+          ajx.ui.applyStyle(css);
+          //插入节点
+          ajx.ui.root.appendChild(ajx.ui.inflate(xml));
+          var test = ajx.ui.getElementById('test');
+          //绑定事件
+          test.addEventListener('click', function () {
+              test.setAttribute('text', '我修改了');
+          });
+        });
+      </xmp>
+    </div> -->
+
+  <!-- <div class="git_repo_container" data-try-title="hellow world"
+    data-qr-code-url="http://ajxtool.amap.test/ajxQrCode/download.ajx?id=266&library=0&page=path%3A%2F%2Fajx-try-demo%2Fsrc%2Fpages%2Findex.page.js&server=http%3A%2F%2Fajxtool.amap.test%2FajxQrCode%2FgetAjxDetail%3Fid%3D266%26library%3D0&bundle=ajx-try-demo"
+    data-code-type="javascript" data-repo-id="2259303"
+    data-repo-src="git@gitlab.alibaba-inc.com:ajx-demo/ajx-try-demo.git" data-repo-open="src/pages/index.page">
+    <textarea style="display:none;">
+        import '@framework/env';
+        import * as AJX from '@framework/FOXRax.js';
+        const Demo = () => {
+
+            return (
+                <div id='box' style={{'padding-top': '160px'}}>
+                  <label text="耳机拔出插入事件监听测试"></label>
+                </div>
+            )
+        }
+
+        AJX.render(<Demo />, ajx.ui.root)
+        </textarea>
+  </div> -->
+</body>
+
 </html>
