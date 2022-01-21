@@ -1,6 +1,7 @@
 
 
-export const serverDomain = 'http://localhost:6001'; //'http://ajxtool.amap.test'; // 
+// todo wtl
+export const serverDomain = 'http://localhost:6001'; // 'http://ajxtool.amap.test'; 
 
 
 export const codeDisplayConfig = {
@@ -12,6 +13,8 @@ export const codeDisplayConfig = {
   singleFilePath: 'src/pages/index.page',
   // ideFileRoutePre: `${serverDomain}/#/webidefile`,
   cssLinks: [
-    '../styles/codepreview.css',
+    'http://30.28.11.32:8888/css/code_preview.css',
+    'http://30.28.11.32:8888/css/libs/codemirror.css',
+    'http://30.28.11.32:8888/css/libs/antd.min.css'
   ]
 }

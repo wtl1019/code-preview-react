@@ -1,7 +1,6 @@
 import { Component } from 'react';
 import ReactDOM from 'react-dom';
-// import { codeDisplayConfig } from '../config/constant';
-import '../styles/codepreview.css';
+import { codeDisplayConfig } from '../config/constant';
 
 // 利用 ReactDOM.createPortal 的实现 Shadow Dom
 function ShadowContent({ root, children }) {
@@ -18,12 +17,12 @@ class ShadowView extends Component {
   setRoot = elemnt => {
     const root = elemnt.attachShadow({ mode: "open" });
 
-    // codeDisplayConfig.cssLinks.forEach(item => {
-    //   const linkElem = document.createElement('link');
-    //   linkElem.setAttribute('rel', 'stylesheet');
-    //   linkElem.setAttribute('href', item);
-    //   root.appendChild(linkElem);
-    // });
+    codeDisplayConfig.cssLinks.forEach(item => {
+      const linkElem = document.createElement('link');
+      linkElem.setAttribute('rel', 'stylesheet');
+      linkElem.setAttribute('href', item);
+      root.appendChild(linkElem);
+    });
 
     this.setState({ root });
   };

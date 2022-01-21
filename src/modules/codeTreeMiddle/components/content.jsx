@@ -6,10 +6,11 @@ import { checkImgType, fileMode, transformArrayBufferToBase64 } from '../../../u
 
 
 import 'codemirror/mode/javascript/javascript';
-import 'codemirror/mode/xml/xml';
+import 'codemirror/mode/htmlmixed/htmlmixed';
 import 'codemirror/mode/markdown/markdown';
+import 'codemirror/mode/css/css';
 
-import 'codemirror/lib/codemirror.css';
+// import 'codemirror/lib/codemirror.css';
 
 
 // 右侧内容区组件 start
