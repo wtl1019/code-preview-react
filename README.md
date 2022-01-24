@@ -7,5 +7,5 @@
 
 
 ### 备注：
-  > 1. 修改css文件，部署时需手动复制
-  > 2. shadow dom 里的css需要配置cdn地址
+  > 1. 若修改了css文件，部署时需手动复制
+  > 2. shadow dom 里的css需要配置部署后的cdn地址
